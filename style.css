@@ -1,0 +1,174 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --primary: #1e90ff;
+  --accent: #ff6b6b;
+  --radius: 12px;
+
+  /* Fluid Typography */
+  --title-size: clamp(2rem, 6vw, 4rem);
+  --subtitle-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+body {
+  background: #9bb3b1ad;
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+}
+
+.hero {
+  text-align: center;
+}
+
+.features {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.card {
+  background: var(--bg);
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1rem;
+  text-align: left;
+}
+
+.grid p {
+  font-size: 12px;
+}
+
+.description {
+  opacity: 50%;
+}
+
+.productImg {
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  margin: 35px;
+  background-image: linear-gradient(to right, red, blue);
+  padding: 50px;
+  border-radius: var(--radius);
+  color: white;
+}
+
+.hero-title span {
+  color: orange;
+}
+
+#loginBut {
+  border-style: outset;
+  border-width: 1px;
+  border-radius: var(--radius);
+  padding: 0.3rem 1rem;
+}
+
+#cartBut {
+  border-style: outset;
+  border-width: 1px;
+  border-radius: var(--radius);
+  padding: 0.3rem 1.3rem;
+  background-color: rgba(32, 36, 247, 0.911);
+  color: white;
+}
+
+.grid button {
+  color: var(--primary);
+  background-color: #9bb3b1ad;
+  padding: 0.5rem 4rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.grid button.addToCart {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.grid button.addToCart:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.filterBut {
+  cursor: pointer;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  background-color: var(--bg);
+  transition: all 0.3s ease;
+}
+
+.filterBut:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.card .productImg {
+  display: block;
+  margin: 0 auto 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  background: rgba(32, 36, 247, 0.911);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+  }
+}
