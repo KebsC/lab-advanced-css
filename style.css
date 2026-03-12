@@ -50,6 +50,8 @@ body {
   transition:
     transform 0.4s,
     box-shadow 0.4s;
+  position: relative;
+  overflow: hidden;
 }
 
 .grid {
@@ -102,10 +104,37 @@ body {
   color: white;
 }
 
+#cartBut #cart-num {
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 0.75rem;
+  margin-left: 4px;
+}
+
+.card.sale::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dashed var(--accent);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
 .grid button {
   color: var(--primary);
   background-color: #9bb3b1ad;
   padding: 0.5rem 4rem;
+}
+
+.btn--added {
+  background-color: var(--accent);
+  color: white;
+  cursor: default;
 }
 
 .card:hover {
